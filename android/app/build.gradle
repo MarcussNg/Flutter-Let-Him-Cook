@@ -60,19 +60,16 @@ android {
         production {
             dimension "default"
             manifestPlaceholders = [appName: "Let Him Cook"]
-            resValue "string", "app_name", "Let Him Cook"
             applicationIdSuffix ""
         }
         staging {
             dimension "default"
             manifestPlaceholders = [appName: "[S] Let Him Cook"]
-            resValue "string", "app_name", "[S] Let Him Cook"
             applicationIdSuffix ".stag"
         }
         development {
             dimension "default"
             manifestPlaceholders = [appName: "[D] Let Him Cook"]
-            resValue "string", "app_name", "[D] Let Him Cook"
             applicationIdSuffix ".dev"
         }
     }
