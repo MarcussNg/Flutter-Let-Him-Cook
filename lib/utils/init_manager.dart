@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:let_him_cook/utils/enum/app_enums.dart';
-import 'package:let_him_cook/utils/shared_preference_handler.dart';
+import 'package:let_him_cook/utils/shared_preference_manager.dart';
 
 Future<void> init(EnvironmentType type) async {
   WidgetsFlutterBinding.ensureInitialized();
