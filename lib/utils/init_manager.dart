@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:let_him_cook/utils/enum/app_enums.dart';
+import 'package:let_him_cook/utils/services/base_services.dart';
 import 'package:let_him_cook/utils/shared_preference_manager.dart';
 
 Future<void> init(EnvironmentType type) async {
@@ -9,26 +10,23 @@ Future<void> init(EnvironmentType type) async {
   await SharedPreferenceManager.getSharedPreference();
 
   // Setup hostURL for API call in services
-  // switch (type) {
-  //   case EnvironmentType.PRODUCTION:
-  //     {
-  //       BaseServices.hostUrl = ProductionConstant.API_ENDPOINT;
-  //       await configApp(EnvironmentType.PRODUCTION);
-  //     }
-  //     break;
-  //   case EnvironmentType.STAGING:
-  //     {
-  //       BaseServices.hostUrl = StagingConstant.API_ENDPOINT;
-  //       await configApp(EnvironmentType.STAGING);
-  //     }
-  //     break;
-  //   case EnvironmentType.DEVELOPMENT:
-  //     {
-  //       BaseServices.hostUrl = DevelopmentConstant.API_ENDPOINT;
-  //       await configApp(EnvironmentType.DEVELOPMENT);
-  //     }
-  //     break;
-  // }
+  switch (type) {
+    case EnvironmentType.PRODUCTION:
+      {
+        BaseServices.hostUrl = ProductionConstant.API_ENDPOINT;
+      }
+      break;
+    case EnvironmentType.STAGING:
+      {
+        BaseServices.hostUrl = StagingConstant.API_ENDPOINT;
+      }
+      break;
+    case EnvironmentType.DEVELOPMENT:
+      {
+        BaseServices.hostUrl = DevelopmentConstant.API_ENDPOINT;
+      }
+      break;
+  }
 
   // Initialize Firebase Configurations
   // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform(type));
