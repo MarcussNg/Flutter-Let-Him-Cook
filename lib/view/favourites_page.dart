@@ -7,9 +7,15 @@ class FavouritesPage extends BaseStatefulPage {
   State<FavouritesPage> createState() => _FavouritesPageState();
 }
 
-class _FavouritesPageState extends State<FavouritesPage> {
+class _FavouritesPageState extends BaseStatefulState<FavouritesPage> {
   @override
   Widget build(BuildContext context) {
     return const Text("This is favorites page");
+  }
+
+  @override
+  Widget body() {
+    // TODO: implement body
+    throw UnimplementedError();
   }
 }
