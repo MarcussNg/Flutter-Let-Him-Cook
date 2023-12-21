@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:let_him_cook/HomePage.dart';
+import 'package:let_him_cook/utils/router/app_router.dart';
 
 class App extends StatelessWidget {
   final String appName;
@@ -8,8 +8,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
+    return MaterialApp.router(
+      routerConfig: router,
     );
   }
 }
